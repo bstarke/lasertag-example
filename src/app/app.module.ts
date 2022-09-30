@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PlayerComponent } from './player/player.component';
 import { TeamComponent } from './team/team.component';
 import { GameComponent } from './game/game.component';
+import { PlayerListComponent } from './player/player-list/player-list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { GameComponent } from './game/game.component';
     PlayerComponent,
     TeamComponent,
     GameComponent,
+    PlayerListComponent,
   ],
   imports: [
     BrowserModule,
