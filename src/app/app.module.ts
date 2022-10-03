@@ -9,8 +9,6 @@ import { PlayerComponent } from './player/player.component';
 import { TeamComponent } from './team/team.component';
 import { GameComponent } from './game/game.component';
 import { PlayerListComponent } from './player/player-list/player-list.component';
-import {ServerService} from "./server.service";
-import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
