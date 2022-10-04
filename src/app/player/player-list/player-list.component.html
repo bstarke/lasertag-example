@@ -14,9 +14,7 @@
 <div class="row">
   <div class="col-xs-8">
     <ul class="list-group">
-      <a class="list-group-item" style="cursor: pointer" *ngFor="let player of players">
-        {{ player.id }} : {{ player.codeName }}
-      </a>
+        <app-player *ngFor="let player of players" [player] = player></app-player>
     </ul>
   </div>
 </div>

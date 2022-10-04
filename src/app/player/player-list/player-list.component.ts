@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Player} from "../player.model";
+import {ServerService} from "../../server.service";
 
 @Component({
   selector: 'app-player-list',
@@ -8,14 +9,12 @@ import {Player} from "../player.model";
 })
 export class PlayerListComponent implements OnInit {
 
-  players: Player[] = [
-    new Player(1, 'whatthef'),
-    new Player(2, 'ohell')
-  ];
+  players: Player[] = [];
 
-  constructor() { }
+  constructor(private service: ServerService) { }
 
   ngOnInit(): void {
+    this.players = this.service.getPlayers();
   }
 
 }

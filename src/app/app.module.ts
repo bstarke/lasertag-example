@@ -9,6 +9,7 @@ import { PlayerComponent } from './player/player.component';
 import { TeamComponent } from './team/team.component';
 import { GameComponent } from './game/game.component';
 import { PlayerListComponent } from './player/player-list/player-list.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { PlayerListComponent } from './player/player-list/player-list.component'
     FormsModule,
     HttpClientModule
   ],
-  providers: [ServerService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
