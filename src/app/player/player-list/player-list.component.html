@@ -1,20 +1,26 @@
 <div class="row">
-  <div class="8">
+  <div class="col-md-10">
     <form>
       <div class="row">
-        <div class="col-sm-8 form-inline form-group">
-          <label for="codeName" class="col-form-label col-form-label-sm text-left justify-content-start">Code Name&nbsp;</label>
-          <input type="text" id="codeName" class="form-control">
-          <button class="btn btn-success pull-right">Add Player</button>
+        <div class="col-md-3 form-inline form-group">
+          <label for="id" class="col-form-label col-form-label-sm text-left justify-content-start">ID&nbsp;</label>
+          <input type="text" name="id" id="id" class="form-control" [(ngModel)]="newId">
+        </div>
+        <div class="col-md-4 form-inline form-group">
+          <label for="codeName" class="col-form-label col-form-label-sm text-left justify-content-start">CodeName&nbsp;</label>
+          <input type="text" name="codeName" id="codeName" class="form-control" [(ngModel)]="newCodeName">
+        </div>
+        <div class="col-md-3 form-inline form-group">
+          <button (click)="addPlayer()" class="btn btn-success pull-right">Add Player</button>
         </div>
       </div>
     </form>
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-8">
+  <div class="col-md-9">
     <ul class="list-group">
-        <app-player *ngFor="let player of players" [player] = player></app-player>
+      <app-player *ngFor="let player of players" [player]=player></app-player>
     </ul>
   </div>
 </div>
