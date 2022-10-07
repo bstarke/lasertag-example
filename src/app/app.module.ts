@@ -10,7 +10,14 @@ import {TeamComponent} from './team/team.component';
 import {GameComponent} from './game/game.component';
 import {PlayerListComponent} from './player/player-list/player-list.component';
 import {HttpClientModule} from "@angular/common/http";
+import {RouterModule, Routes} from "@angular/router";
 
+const routes: Routes = [
+  {path: '', component: PlayerListComponent},
+  {path: 'players', component: PlayerListComponent},
+  {path: 'teams', component: TeamComponent},
+  {path: 'game', component: GameComponent},
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +31,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
