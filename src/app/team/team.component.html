@@ -1,1 +1,8 @@
-<p>team name</p>
+<div class="row">
+  <div *ngFor="let team of teams" class="col-md-3">
+    <h3>{{team.name}}</h3>
+    <ul class="list-group">
+      <li *ngFor="let player of team.players">{{player.codeName}}</li>
+    </ul>
+  </div>
+</div>
